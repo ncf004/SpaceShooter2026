@@ -10,12 +10,14 @@ public class Player : MonoBehaviour
     public Transform bulletSpawnPoint;
     public Shield shield;
     public Slider sliderHealth;
+    public float playerShotDelay;
 
     private float health;
+    private float playerShotTimer;
 
     private const float Y_LIMIT = 4.6f;
     private const float X_LIMIT_LEFT = -.1f;
-    private const float X_LIMIT_RIGHT = 16.5f;
+    private const float X_LIMIT_RIGHT = 10f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -27,10 +29,14 @@ public class Player : MonoBehaviour
     void Update()
     {
         sliderHealth.value = health;
+        playerShotTimer += Time.deltaTime;
 
         if (UserInput.Instance.input.Fire.WasPressedThisFrame())
         {
-            GameObject bulletObj = Instantiate(bulletPrefab, bulletSpawnPoint.position, Quaternion.identity);
+            if (playerShotTimer >= playerShotDelay)
+            {
+                GameObject bulletObj = Instantiate(bulletPrefab, bulletSpawnPoint.position, Quaternion.identity);
+            }
         }
 
         var vertMove = UserInput.Instance.input.MoveVertically.ReadValue<float>();
