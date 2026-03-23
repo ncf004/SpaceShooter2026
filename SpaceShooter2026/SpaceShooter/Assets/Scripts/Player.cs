@@ -24,6 +24,17 @@ public class Player : MonoBehaviour
     {
         health = 1.0f;
     }
+    public void DamageFromEnemy()
+    {
+        if (!shield.IsActive)
+        {
+            health -= 0.25f;
+            if (health <= 0)
+            {
+                Destroy(gameObject);
+            }
+        }
+    }
 
     // Update is called once per frame
     void Update()
@@ -64,16 +75,5 @@ public class Player : MonoBehaviour
 
     }
 
-    public void DamageFromEnemy()
-    {
-        if (!shield.IsActive)
-        {
-            health -= 0.25f;
-            if (health <= 0)
-            {
-                Destroy(gameObject);
-            }
-        }
-    }
 }
 

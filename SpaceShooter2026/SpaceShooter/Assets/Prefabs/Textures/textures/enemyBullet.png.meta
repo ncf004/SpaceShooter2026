@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: fc12ab1e56a94ff4fad544ef5537548a
+guid: 8f0d1886acda2274aa8bd98c878c8b9a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4041849429743191656
-    second: powerUpBigBullet_0
+      213: -3080481381580708672
+    second: enemyBullet_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,17 +109,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: powerUpBigBullet_0
+      name: enemyBullet_0
       rect:
         serializedVersion: 2
         x: 319
-        y: 329
-        width: 1352
-        height: 1232
+        y: 519
+        width: 1602
+        height: 922
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 866457744a8871830800000000000000
-      internalID: 4041849429743191656
+      spriteID: 0c46da9218eef35d0800000000000000
+      internalID: -3080481381580708672
       vertices: []
       indices: 
       edges: []
@@ -148,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      powerUpBigBullet_0: 4041849429743191656
+      enemyBullet_0: -3080481381580708672
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

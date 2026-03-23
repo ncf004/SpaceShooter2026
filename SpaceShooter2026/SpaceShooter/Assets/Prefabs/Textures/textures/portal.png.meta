@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 2aefd65464fa9f04283fce644f447eb8
+guid: 8da677fd31b5d4a4c92e58b80ca3c9f3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4221727865016309700
-    second: finalBoss_0
-  - first:
-      213: -3653766728063563718
-    second: finalBoss_1
+      213: -5816642994671486895
+    second: portal_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -112,17 +109,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: finalBoss_0
+      name: portal_0
       rect:
         serializedVersion: 2
-        x: 181
-        y: 1581
-        width: 9
-        height: 9
+        x: 27
+        y: 0
+        width: 2004
+        height: 2052
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,30 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4c75aa42027969a30800000000000000
-      internalID: 4221727865016309700
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: finalBoss_1
-      rect:
-        serializedVersion: 2
-        x: 286
-        y: 797
-        width: 1814
-        height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a3841a1f4863b4dc0800000000000000
-      internalID: -3653766728063563718
+      spriteID: 1587755a302274fa0800000000000000
+      internalID: -5816642994671486895
       vertices: []
       indices: 
       edges: []
@@ -173,8 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      finalBoss_0: 4221727865016309700
-      finalBoss_1: -3653766728063563718
+      portal_0: -5816642994671486895
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

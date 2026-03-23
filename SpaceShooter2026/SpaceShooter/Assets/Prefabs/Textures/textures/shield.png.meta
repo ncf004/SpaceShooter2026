@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a9690b384610b9a40a91c82edc456f21
+guid: a277acae167e8744093b4f0f988d6486
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 9022607989236147093
-    second: powerUpShield_0
+      213: 2389193319765324094
+    second: shield_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,17 +109,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: powerUpShield_0
+      name: shield_0
       rect:
         serializedVersion: 2
-        x: 249
-        y: 299
-        width: 1502
-        height: 1432
+        x: 409
+        y: 399
+        width: 1212
+        height: 1212
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 593a502992eb63d70800000000000000
-      internalID: 9022607989236147093
+      spriteID: e3139547aae182120800000000000000
+      internalID: 2389193319765324094
       vertices: []
       indices: 
       edges: []
@@ -148,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      powerUpShield_0: 9022607989236147093
+      shield_0: 2389193319765324094
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

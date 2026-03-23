@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 203f296fd03a7cb41a1f646a3e4e7b57
+guid: 9118530ecad56d846b1bae5db89975f5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -372395067520658631
-    second: planet_0
+      213: 102386611655877425
+    second: powerUpMachineGun_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,17 +109,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: planet_0
+      name: powerUpMachineGun_0
       rect:
         serializedVersion: 2
-        x: 259
-        y: 369
-        width: 1482
-        height: 1482
+        x: 319
+        y: 329
+        width: 1352
+        height: 1232
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 933d25cb8acf4daf0800000000000000
-      internalID: -372395067520658631
+      spriteID: 1332181b410cb6100800000000000000
+      internalID: 102386611655877425
       vertices: []
       indices: 
       edges: []
@@ -148,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      planet_0: -372395067520658631
+      powerUpMachineGun_0: 102386611655877425
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

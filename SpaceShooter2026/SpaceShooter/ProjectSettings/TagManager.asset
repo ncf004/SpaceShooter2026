@@ -8,6 +8,7 @@ TagManager:
   - Bullet
   - ScreenOutOfBounds
   - Explosion
+  - EnemyBullet
   layers:
   - Default
   - TransparentFX
