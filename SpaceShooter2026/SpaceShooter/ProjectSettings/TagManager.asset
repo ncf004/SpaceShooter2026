@@ -10,6 +10,8 @@ TagManager:
   - Explosion
   - EnemyBullet
   - Sprinter
+  - Shooter
+  - Boss
   layers:
   - Default
   - TransparentFX

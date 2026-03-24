@@ -20,6 +20,9 @@ public class Player : MonoBehaviour
     public float machineGunFireRate = 0.12f;
     public float bigBulletFireRate = 0.7f;
 
+    public AudioSource sfxSource;
+    public AudioClip fireClip;
+
     private float fireTimer = 0f;
 
     private const float Y_LIMIT = 4.6f;
