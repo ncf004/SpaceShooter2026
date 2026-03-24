@@ -1,12 +1,19 @@
 using UnityEngine;
 
-public class EnemyBullets : MonoBehaviour
+public class BossBullet : MonoBehaviour
 {
     public float speed = 6f;
 
+    private Vector3 moveDirection = Vector3.left;
+
+    public void SetDirection(Vector3 direction)
+    {
+        moveDirection = direction.normalized;
+    }
+
     void Update()
     {
-        transform.Translate(Vector3.left * speed * Time.deltaTime);
+        transform.Translate(moveDirection * speed * Time.deltaTime, Space.World);
     }
 
     private void OnTriggerEnter2D(Collider2D c)

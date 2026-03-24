@@ -6,6 +6,7 @@ public class Shooter : MonoBehaviour
     public GameObject expoPrefab;
     public GameObject bulletPrefab;
     public Transform firePoint;
+    public float health = 1f;
 
     private Vector3 startPos;
     private bool hasStopped = false;
@@ -21,7 +22,6 @@ public class Shooter : MonoBehaviour
     {
         float targetX = startPos.x - 5f;
 
-        // Phase 1: Move until 5 units left
         if (!hasStopped)
         {
             if (transform.position.x > targetX)
@@ -33,15 +33,11 @@ public class Shooter : MonoBehaviour
                 hasStopped = true;
             }
         }
-
-        // Phase 2: Shoot once
         else if (!hasShot)
         {
             Shoot();
             hasShot = true;
         }
-
-        // Phase 3: Wait 2 seconds, then resume movement
         else
         {
             waitTimer += Time.deltaTime;
@@ -55,32 +51,83 @@ public class Shooter : MonoBehaviour
 
     void Shoot()
     {
-        Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+        if (bulletPrefab != null && firePoint != null)
+        {
+            Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+        }
+    }
+
+    public void TakeDamage(float damage)
+    {
+        health -= damage;
+
+        if (health <= 0f)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        if (expoPrefab != null)
+        {
+            var expoObj = Instantiate(expoPrefab, transform.position, Quaternion.identity);
+            ParticleSystem ps = expoObj.GetComponentInChildren<ParticleSystem>();
+
+            if (ps != null)
+            {
+                Destroy(expoObj, ps.main.duration);
+            }
+            else
+            {
+                Destroy(expoObj, 1f);
+            }
+        }
+
+        if (PowerUpSpawner.Instance != null)
+        {
+            PowerUpSpawner.Instance.TrySpawnPowerUp(transform.position);
+        }
+
+        if (Score.Instance != null)
+        {
+            Score.Instance.HitEnemy();
+        }
+        if (WaveManager.Instance != null)
+        {
+            WaveManager.Instance.EnemyKilled();
+        }
+
+        Destroy(gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("ScreenOutOfBounds"))
         {
+            if (WaveManager.Instance != null)
+            {
+                WaveManager.Instance.EnemyKilled();
+            }
             Destroy(gameObject);
         }
     }
 
     private void OnCollisionEnter2D(Collision2D c)
     {
-        if (c.gameObject.CompareTag("Bullet"))
-        {
-            var expoObj = Instantiate(expoPrefab, transform.position, Quaternion.identity);
-            Destroy(expoObj, expoObj.GetComponentInChildren<ParticleSystem>().main.duration);
-
-            Destroy(c.gameObject);
-            Destroy(gameObject);
-            Score.Instance.HitEnemy();
-        }
-
         if (c.gameObject.CompareTag("Player"))
         {
-            c.gameObject.GetComponent<Player>().DamageFromEnemy();
+            Player p = c.gameObject.GetComponent<Player>();
+            if (p == null)
+            {
+                p = c.gameObject.GetComponentInParent<Player>();
+            }
+
+            if (p != null)
+            {
+                p.DamageFromEnemy();
+            }
+
             Destroy(gameObject);
         }
     }

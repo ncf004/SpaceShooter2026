@@ -9,6 +9,7 @@ TagManager:
   - ScreenOutOfBounds
   - Explosion
   - EnemyBullet
+  - Sprinter
   layers:
   - Default
   - TransparentFX

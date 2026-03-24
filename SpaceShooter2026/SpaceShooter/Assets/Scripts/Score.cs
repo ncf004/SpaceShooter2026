@@ -1,32 +1,40 @@
-using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 public class Score : MonoBehaviour
 {
-    private TextMeshProUGUI txtScore;
-    private float score;
+    public static Score Instance;
 
-    public static Score Instance { get; private set; }
+    public int score = 0;
+    public TextMeshProUGUI scoreText;
 
-    private void Awake()
+    void Awake()
     {
         Instance = this;
-        score = 0.0f;
     }
 
     void Start()
     {
-        txtScore = GetComponentInChildren<TextMeshProUGUI>();
-    }
-
-    void Update()
-    {
-        txtScore.text = $"Score: {score}"; // "string interpolation"
+        UpdateScoreText();
     }
 
     public void HitEnemy()
     {
-        score += 1_000;
+        score += 1;
+        UpdateScoreText();
+    }
+
+    public void ResetScore()
+    {
+        score = 0;
+        UpdateScoreText();
+    }
+
+    void UpdateScoreText()
+    {
+        if (scoreText != null)
+        {
+            scoreText.text = "Score: " + score;
+        }
     }
 }
